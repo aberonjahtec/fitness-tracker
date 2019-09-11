@@ -1,0 +1,8 @@
+<ng-container *ngIf="recipes$ | async as recipes; else loading">
+  <mat-list role="list">
+    <mat-list-item *ngFor="let recipe of recipes" role="listitem">
+      <a routerLink="/recipes/{{ recipe.idMeal }}">{{ recipe.strMeal }}</a>
+    </mat-list-item>
+  </mat-list>
+</ng-container>
+<ng-template #loading><mat-spinner></mat-spinner></ng-template>

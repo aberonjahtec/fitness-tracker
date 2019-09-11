@@ -1,0 +1,5 @@
+<div *ngIf="recipe$ | async as recipe">
+  <span>{{ recipe.strMeal }}</span>
+  <p>{{ recipe.strInstructions }}</p>
+</div>
+<ng-template #loading><mat-spinner></mat-spinner></ng-template>
